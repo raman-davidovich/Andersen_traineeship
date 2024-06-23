@@ -53,7 +53,7 @@ function showInformation(currentLesson) {
               <h3>Result</h3>
               <div class="solution"> 
               </div>
-              <a>Show code</a>
+              <a href="#" target="_blank" id="github">Show code</a>
             </div>
           </div>
   `;
@@ -68,6 +68,9 @@ function showResult(lesson, task) {
   const solutionBlock = document.querySelector(".solution");
   solutionBlock.innerHTML = solutions[lesson - 1][task - 1].html;
   solutions[lesson - 1][task - 1].logic();
+
+  const githubLink = document.getElementById("github");
+  githubLink.setAttribute("href", hometasks[lesson - 1][task - 1].githubLink);
 }
 
 export {
