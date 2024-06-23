@@ -6,6 +6,7 @@ import {
   showResult,
 } from "./utils";
 import hometasks from "./hometasks";
+import lesson1Task1ExampleImgUrl from "./assets/Lesson1_task1_example.png";
 
 const lastFinishedLesson = 1;
 
@@ -35,6 +36,10 @@ lessons.forEach((lesson) =>
           const description = document.getElementById("text");
           description.innerHTML =
             hometasks[currentLesson - 1][currentTask - 1].description;
+          if (currentLesson == 1 && currentTask == 1) {
+            document.getElementById("task1DescriptionImage").src =
+              lesson1Task1ExampleImgUrl;
+          }
           showResult(currentLesson, currentTask);
         })
       );

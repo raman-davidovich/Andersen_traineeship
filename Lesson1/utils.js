@@ -2,6 +2,30 @@ import hometasks from "./hometasks";
 import { task2HTML, logicTask2 } from "./solutions/lesson1Task2";
 import { task1Html, logicTask1 } from "./solutions/lesson1Task1";
 
+import lesson1Task1Quiz1ImgUrl from "./assets/example1.png";
+import lesson1Task1Quiz2ImgUrl from "./assets/example2.png";
+import lesson1Task1Quiz3ImgUrl from "./assets/example3.png";
+import lesson1Task1Quiz4ImgUrl from "./assets/example4.png";
+import lesson1Task1Quiz5ImgUrl from "./assets/example5.png";
+import lesson1Task1Quiz6ImgUrl from "./assets/example6.png";
+import lesson1Task1Quiz7ImgUrl from "./assets/example7.png";
+import lesson1Task1Quiz8ImgUrl from "./assets/example8.png";
+import lesson1Task1Quiz9ImgUrl from "./assets/example9.png";
+import lesson1Task1Quiz10ImgUrl from "./assets/example10.png";
+
+const lesson1Task1QuizImgUrls = [
+  lesson1Task1Quiz1ImgUrl,
+  lesson1Task1Quiz2ImgUrl,
+  lesson1Task1Quiz3ImgUrl,
+  lesson1Task1Quiz4ImgUrl,
+  lesson1Task1Quiz5ImgUrl,
+  lesson1Task1Quiz6ImgUrl,
+  lesson1Task1Quiz7ImgUrl,
+  lesson1Task1Quiz8ImgUrl,
+  lesson1Task1Quiz9ImgUrl,
+  lesson1Task1Quiz10ImgUrl,
+];
+
 const solutions = [
   [
     { html: task1Html, logic: logicTask1 },
@@ -68,6 +92,12 @@ function showResult(lesson, task) {
   const solutionBlock = document.querySelector(".solution");
   solutionBlock.innerHTML = solutions[lesson - 1][task - 1].html;
   solutions[lesson - 1][task - 1].logic();
+  if (lesson == 1 && task == 1) {
+    for (let i = 1; i <= 10; i++) {
+      document.getElementById(`lesson1Task1Quiz${i}`).src =
+        lesson1Task1QuizImgUrls[i - 1];
+    }
+  }
 
   const githubLink = document.getElementById("github");
   githubLink.setAttribute("href", hometasks[lesson - 1][task - 1].githubLink);

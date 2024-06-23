@@ -6,7 +6,7 @@ const tasks = [
     Important: the complexity of an expression should not lie in its length.
     <br />
     <br />
-    <img src="./assets/Lesson1_task1_example.png" class="image" />`,
+    <img id="task1DescriptionImage" class="image" />`,
       githubLink:
         "https://github.com/raman-davidovich/Andersen_traineeship/blob/main/Lesson1/solutions/lesson1Task1.js",
     },
