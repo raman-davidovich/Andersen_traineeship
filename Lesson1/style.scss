@@ -261,3 +261,12 @@ dialog:modal {
     margin: 0 45% !important;
   }
 }
+
+#alert,
+#prompt,
+#confirm,
+#reflash {
+  margin-bottom: 10px;
+  width: 100px;
+  align-self: center;
+}

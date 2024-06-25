@@ -7,6 +7,7 @@ import {
 } from "./utils";
 import hometasks from "./hometasks";
 import lesson1Task1ExampleImgUrl from "./assets/Lesson1_task1_example.png";
+import lesson2Task2ExampleImgUrl from "./assets/Lesson2_task2_example.png";
 
 const lastFinishedLesson = 1;
 
@@ -37,8 +38,12 @@ lessons.forEach((lesson) =>
           description.innerHTML =
             hometasks[currentLesson - 1][currentTask - 1].description;
           if (currentLesson == 1 && currentTask == 1) {
-            document.getElementById("task1DescriptionImage").src =
+            document.getElementById("lesson1Task1DescriptionImage").src =
               lesson1Task1ExampleImgUrl;
+          }
+          if (currentLesson == 2 && currentTask == 2) {
+            document.getElementById("lesson2Task2DescriptionImage").src =
+              lesson2Task2ExampleImgUrl;
           }
           showResult(currentLesson, currentTask);
         })
