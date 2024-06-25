@@ -3,7 +3,7 @@ const lesson2Task2Html = `<p>The brieflies way to reflash the global object in n
                   <button id="prompt">Prompt</button>
                   <button id="confirm">Confirm</button>
                   <button id="reflash">Reflash</button>
-                  <p>* At the beginning the methods work as usual. To implement new logic please click "Reflash" button. Second click will get changed back and again and again...</p>`;
+                  <p>* At the beginning the methods work as usual. To implement new logic please click "Reflash" button. Second click will get changed methods again and again...</p>`;
 
 function lesson2Task2Logic() {
   const alertButton = document.getElementById("alert");
