@@ -24,7 +24,7 @@ const tasks = [
     {
       description: `Write your own implementation of the built-in array function filter. Call the function myFilter and make it so that any array can use this function as a "native" one. It must take a callback function as parameters and an optional parameter as an object that will be used as
         <strong>this</strong> in internal calls to this callback function.<br />
-      Ultimately, your myFilter implementation should work exaclty like the built-in filter method. The callback function passed as parameter must also be called with the same paramenters as the original (element, index, array).`,
+      Ultimately, your myFilter implementation should work exactly like the built-in filter method. The callback function passed as parameter must also be called with the same paramenters as the original (element, index, array).`,
       githubLink: "",
     },
     {
