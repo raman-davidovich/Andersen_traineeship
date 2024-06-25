@@ -66,7 +66,7 @@ const quizHtml = quiz
   )
   .join(" ");
 
-const task1Html = `
+const lesson1Task1Html = `
   <h3>Try to guess an answer and check yourself using "show the answer"</h3>
   <div class="slider-container">
     <div class="slider">
@@ -77,7 +77,7 @@ const task1Html = `
   </div>
 `;
 
-function logicTask1() {
+function lesson1Task1Logic() {
   // Получаем элементы слайдера
   const slider = document.querySelector(".slider");
   const prevButton = document.querySelector(".prev-button");
@@ -131,4 +131,4 @@ function logicTask1() {
   });
 }
 
-export { task1Html, logicTask1 };
+export { lesson1Task1Html, lesson1Task1Logic };

@@ -6,14 +6,14 @@ function transformToBinary(number) {
   }
 }
 
-const task2HTML = `<label for="number">Input a number</label>
+const lesson1Task2Html = `<label for="number">Input a number</label>
                    <br/>
                    <input id="number" type="number" required>
                    <button id="transform" >Transform</button>
                    <p>Binary form of <span class="decimal"></span> is <span class="binary"></span>.
                    `;
 
-function logicTask2() {
+function lesson1Task2Logic() {
   const transformButton = document.getElementById("transform");
   const decimalForm = document.querySelector(".decimal");
   const binaryForm = document.querySelector(".binary");
@@ -26,4 +26,4 @@ function logicTask2() {
   });
 }
 
-export { task2HTML, logicTask2 };
+export { lesson1Task2Html, lesson1Task2Logic };
