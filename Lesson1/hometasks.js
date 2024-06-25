@@ -20,26 +20,26 @@ const tasks = [
         "https://github.com/raman-davidovich/Andersen_traineeship/blob/main/Lesson1/solutions/lesson1Task2.js",
     },
   ],
-  // [
-  //   {
-  //     description: `Write your own implementation of hte built-in array function filter. Call the function myFilter and make it so that any array can use this function as a "native" one. It must take a callback function as parameters and an optional parameter as an object that will be used as
-  //       <strong>this</strong> in internal calls to this callback function.<br />
-  //     Ultimately, your myFilter implementation should work exaclty like he built-in filter method. The callback function passed as parameter must also be called with the same paramenters as the original (element, index, array).`,
-  //     githubLink: "",
-  //   },
-  //   {
-  //     description: `It is necessary to reflash the global object a little.<br />
-  //     Consider these three functions:<br />
-  //     <br />
-  //     <img src="./assets/Lesson2_task2_example.png" class="image"/>
-  //     <br />
-  //     <br />
-  //     When calling alert(), the logic confirm(), prompt - alert(), confirm() - prompt() should work, feel free to use yourown order.<br />
-  //     <br />
-  //     *Additionally - try to do this as briefly as possible, in the least amount of steps. (By action we mean any operation - creating a variable, equating, calling a method)`,
-  //     githubLink: "",
-  //   },
-  // ],
+  [
+    {
+      description: `Write your own implementation of hte built-in array function filter. Call the function myFilter and make it so that any array can use this function as a "native" one. It must take a callback function as parameters and an optional parameter as an object that will be used as
+        <strong>this</strong> in internal calls to this callback function.<br />
+      Ultimately, your myFilter implementation should work exaclty like he built-in filter method. The callback function passed as parameter must also be called with the same paramenters as the original (element, index, array).`,
+      githubLink: "",
+    },
+    {
+      description: `It is necessary to reflash the global object a little.<br />
+      Consider these three functions:<br />
+      <br />
+      <img src="./assets/Lesson2_task2_example.png" class="image"/>
+      <br />
+      <br />
+      When calling alert(), the logic confirm(), prompt - alert(), confirm() - prompt() should work, feel free to use yourown order.<br />
+      <br />
+      *Additionally - try to do this as briefly as possible, in the least amount of steps. (By action we mean any operation - creating a variable, equating, calling a method)`,
+      githubLink: "",
+    },
+  ],
   // [
   //   {
   //     description: `Create a regular object and make it iterable. In this case, the iteration should proceed as follows:<br />
