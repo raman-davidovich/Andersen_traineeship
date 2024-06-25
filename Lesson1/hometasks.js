@@ -6,7 +6,7 @@ const tasks = [
     Important: the complexity of an expression should not lie in its length.
     <br />
     <br />
-    <img id="task1DescriptionImage" class="image" />`,
+    <img id="lesson1Task1DescriptionImage" class="image" />`,
       githubLink:
         "https://github.com/raman-davidovich/Andersen_traineeship/blob/main/Lesson1/solutions/lesson1Task1.js",
     },
@@ -31,13 +31,14 @@ const tasks = [
       description: `It is necessary to reflash the global object a little.<br />
       Consider these three functions:<br />
       <br />
-      <img src="./assets/Lesson2_task2_example.png" class="image"/>
+      <img id="lesson2Task2DescriptionImage" class="image"/>
       <br />
       <br />
       When calling alert(), the logic confirm(), prompt - alert(), confirm() - prompt() should work, feel free to use yourown order.<br />
       <br />
       *Additionally - try to do this as briefly as possible, in the least amount of steps. (By action we mean any operation - creating a variable, equating, calling a method)`,
-      githubLink: "",
+      githubLink:
+        "https://github.com/raman-davidovich/Andersen_traineeship/blob/main/Lesson1/solutions/lesson2Task2.js",
     },
   ],
   // [
