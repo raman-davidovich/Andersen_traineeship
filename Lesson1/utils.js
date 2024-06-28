@@ -1,6 +1,7 @@
 import hometasks from "./hometasks";
-import { lesson1Task2Html, lesson1Task2Logic } from "./solutions/lesson1Task2";
 import { lesson1Task1Html, lesson1Task1Logic } from "./solutions/lesson1Task1";
+import { lesson1Task2Html, lesson1Task2Logic } from "./solutions/lesson1Task2";
+import { lesson2Task1Html, lesson2Task1Logic } from "./solutions/lesson2Task1";
 import { lesson2Task2Html, lesson2Task2Logic } from "./solutions/lesson2Task2";
 
 import lesson1Task1Quiz1ImgUrl from "./assets/example1.png";
@@ -33,7 +34,7 @@ const solutions = [
     { html: lesson1Task2Html, logic: lesson1Task2Logic },
   ],
   [
-    { html: null, logic: null },
+    { html: lesson2Task1Html, logic: lesson2Task1Logic },
     { html: lesson2Task2Html, logic: lesson2Task2Logic },
   ],
 ];

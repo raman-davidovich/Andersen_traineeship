@@ -247,11 +247,15 @@ body {
   }
 
   #transform,
-  #number {
+  #number,
+  #array,
+  #condition,
+  #filter {
     width: 300px;
   }
 
-  #number {
+  #number,
+  #condition {
     margin-bottom: 10px;
   }
 }

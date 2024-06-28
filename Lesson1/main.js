@@ -9,7 +9,7 @@ import hometasks from "./hometasks";
 import lesson1Task1ExampleImgUrl from "./assets/Lesson1_task1_example.png";
 import lesson2Task2ExampleImgUrl from "./assets/Lesson2_task2_example.png";
 
-const lastFinishedLesson = 1;
+const lastFinishedLesson = 2;
 
 let currentLesson = lastFinishedLesson;
 let currentTask = 1;
