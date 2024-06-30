@@ -20,10 +20,13 @@ lessons.forEach((lesson) =>
   lesson.addEventListener("click", function () {
     currentLesson = lesson.id.at(-1);
     currentTask = 1;
+
     const activeLesson = document.querySelector(".lessons > .active");
     activeLesson.classList.remove("active");
     this.classList.add("active");
+
     const information = document.getElementById("information");
+
     if (hometasks[currentLesson - 1]) {
       information.innerHTML = showInformation(currentLesson);
       markFirstTask();
