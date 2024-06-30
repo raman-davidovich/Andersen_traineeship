@@ -3,6 +3,7 @@ import { lesson1Task1Html, lesson1Task1Logic } from "./solutions/lesson1Task1";
 import { lesson1Task2Html, lesson1Task2Logic } from "./solutions/lesson1Task2";
 import { lesson2Task1Html, lesson2Task1Logic } from "./solutions/lesson2Task1";
 import { lesson2Task2Html, lesson2Task2Logic } from "./solutions/lesson2Task2";
+import { lesson6Task1Html, lesson6Task1Logic } from "./solutions/lesson6Task1";
 
 import lesson1Task1Quiz1ImgUrl from "./assets/example1.png";
 import lesson1Task1Quiz2ImgUrl from "./assets/example2.png";
@@ -37,6 +38,13 @@ const solutions = [
     { html: lesson2Task1Html, logic: lesson2Task1Logic },
     { html: lesson2Task2Html, logic: lesson2Task2Logic },
   ],
+  [
+    { html: null, logic: null },
+    { html: null, logic: null },
+  ],
+  [{ html: null, logic: null }],
+  [{ html: null, logic: null }],
+  [{ html: lesson6Task1Html, logic: lesson6Task1Logic }],
 ];
 
 function showLastFinishedLesson(lastFinishedLesson) {

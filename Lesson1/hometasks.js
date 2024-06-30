@@ -127,7 +127,8 @@ const tasks = [
       <br/>
       Optionally: use Map for storing the posts.
       `,
-      githubLink: "",
+      githubLink:
+        "https://github.com/raman-davidovich/Andersen_traineeship/blob/main/Lesson1/solutions/lesson6Task1.js",
     },
   ],
 ];
