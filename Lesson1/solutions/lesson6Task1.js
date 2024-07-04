@@ -19,13 +19,16 @@ const lesson6Task1Html = `<div id="lesson6Task1">
 function lesson6Task1Logic() {
   class DataHandler {
     constructor() {
-      this.url = "https:/jsonplaceholder.typicode.com/posts";
+      this.url = "https://jsonplaceholder.typicode.com/posts";
       this.data = new Map();
     }
 
     async fetchPosts() {
       try {
-        let responce = await fetch(this.url);
+        let responce = await fetch(this.url, {
+          mode: "cors",
+          credentials: "omit",
+        });
 
         if (!responce.ok) {
           throw new Error("Network responce was not ok", responce.statusText);
