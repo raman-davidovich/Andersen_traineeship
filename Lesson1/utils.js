@@ -16,6 +16,10 @@ import lesson1Task1Quiz8ImgUrl from "./assets/example8.png";
 import lesson1Task1Quiz9ImgUrl from "./assets/example9.png";
 import lesson1Task1Quiz10ImgUrl from "./assets/example10.png";
 
+import lesson1Task1ExampleImgUrl from "./assets/Lesson1_task1_example.png";
+import lesson2Task2ExampleImgUrl from "./assets/Lesson2_task2_example.png";
+import lesson3Task2ExampleImgUrl from "./assets/Lesson3_task2_example.png";
+
 const lesson1Task1QuizImgUrls = [
   lesson1Task1Quiz1ImgUrl,
   lesson1Task1Quiz2ImgUrl,
@@ -117,10 +121,37 @@ function showResult(lesson, task) {
   githubLink.setAttribute("href", hometasks[lesson - 1][task - 1].githubLink);
 }
 
+function setImageSource(lesson, task) {
+  let elementId = "";
+  let imageUrl = "";
+
+  switch (`${lesson}-${task}`) {
+    case "1-1":
+      elementId = "lesson1Task1DescriptionImage";
+      imageUrl = lesson1Task1ExampleImgUrl;
+      break;
+    case "2-2":
+      elementId = "lesson2Task2DescriptionImage";
+      imageUrl = lesson2Task2ExampleImgUrl;
+      break;
+    case "3-2":
+      elementId = "lesson3Task2DescriptionImage";
+      imageUrl = lesson3Task2ExampleImgUrl;
+      break;
+    default:
+      return;
+  }
+
+  if (elementId && imageUrl) {
+    document.getElementById(elementId).src = imageUrl;
+  }
+}
+
 export {
   showLastFinishedLesson,
   showMockPage,
   showInformation,
   markFirstTask,
   showResult,
+  setImageSource,
 };
