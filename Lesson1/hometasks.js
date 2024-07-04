@@ -74,7 +74,7 @@ const tasks = [
       Additionally - it is not necessary to write these properties as your own for the object, you can play with prototypes
       <br />
       <br />
-      <img src="./assets/Lesson3_task2_example.png" class="image"/>
+      <img id="lesson3Task2DescriptionImage" class="image"/>
       `,
       githubLink: "",
     },
