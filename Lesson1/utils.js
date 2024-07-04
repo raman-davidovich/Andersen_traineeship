@@ -49,6 +49,7 @@ const solutions = [
   [{ html: null, logic: null }],
   [{ html: null, logic: null }],
   [{ html: lesson6Task1Html, logic: lesson6Task1Logic }],
+  [{ html: null, logic: null }],
 ];
 
 function showLastFinishedLesson(lastFinishedLesson) {
@@ -107,18 +108,25 @@ function markFirstTask() {
 }
 
 function showResult(lesson, task) {
-  const solutionBlock = document.querySelector(".solution");
-  solutionBlock.innerHTML = solutions[lesson - 1][task - 1].html;
-  solutions[lesson - 1][task - 1].logic();
-  if (lesson == 1 && task == 1) {
-    for (let i = 1; i <= 10; i++) {
-      document.getElementById(`lesson1Task1Quiz${i}`).src =
-        lesson1Task1QuizImgUrls[i - 1];
-    }
-  }
+  const solution = solutions[lesson - 1][task - 1];
 
-  const githubLink = document.getElementById("github");
-  githubLink.setAttribute("href", hometasks[lesson - 1][task - 1].githubLink);
+  if (solution && solution.html && solution.logic) {
+    const solutionBlock = document.querySelector(".solution");
+    solutionBlock.innerHTML = solution.html;
+    solution.logic();
+
+    if (lesson == 1 && task == 1) {
+      for (let i = 1; i <= 10; i++) {
+        document.getElementById(`lesson1Task1Quiz${i}`).src =
+          lesson1Task1QuizImgUrls[i - 1];
+      }
+    }
+
+    const githubLink = document.getElementById("github");
+    githubLink.setAttribute("href", hometasks[lesson - 1][task - 1].githubLink);
+  } else {
+    console.warn(`No solution found for lesson${lesson}, task${task}.`);
+  }
 }
 
 function setImageSource(lesson, task) {
