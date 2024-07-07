@@ -67,11 +67,15 @@ function lesson6Task1Logic() {
 
     const fetchButton = document.getElementById("fetch");
     const fetchStatus = document.getElementById("status");
-    fetchButton.addEventListener("click", function () {
-      handler.fetchPosts();
-      fetchStatus.innerText = `Fulfilled`;
-      fetchStatus.classList.remove("empty");
-      fetchStatus.classList.add("fulfilled");
+    fetchButton.addEventListener("click", async function () {
+      try {
+        await handler.fetchPosts();
+        fetchStatus.innerText = `Fulfilled`;
+        fetchStatus.classList.remove("empty");
+        fetchStatus.classList.add("fulfilled");
+      } catch (error) {
+        console.error("The was a problem with the fetch operation:", error);
+      }
     });
 
     const listButton = document.getElementById("list");
