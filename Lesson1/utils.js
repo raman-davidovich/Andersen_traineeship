@@ -5,33 +5,7 @@ import { lesson2Task1Html, lesson2Task1Logic } from "./solutions/lesson2Task1";
 import { lesson2Task2Html, lesson2Task2Logic } from "./solutions/lesson2Task2";
 import { lesson6Task1Html, lesson6Task1Logic } from "./solutions/lesson6Task1";
 
-import lesson1Task1Quiz1ImgUrl from "./assets/example1.png";
-import lesson1Task1Quiz2ImgUrl from "./assets/example2.png";
-import lesson1Task1Quiz3ImgUrl from "./assets/example3.png";
-import lesson1Task1Quiz4ImgUrl from "./assets/example4.png";
-import lesson1Task1Quiz5ImgUrl from "./assets/example5.png";
-import lesson1Task1Quiz6ImgUrl from "./assets/example6.png";
-import lesson1Task1Quiz7ImgUrl from "./assets/example7.png";
-import lesson1Task1Quiz8ImgUrl from "./assets/example8.png";
-import lesson1Task1Quiz9ImgUrl from "./assets/example9.png";
-import lesson1Task1Quiz10ImgUrl from "./assets/example10.png";
-
-import lesson1Task1ExampleImgUrl from "./assets/Lesson1_task1_example.png";
-import lesson2Task2ExampleImgUrl from "./assets/Lesson2_task2_example.png";
-import lesson3Task2ExampleImgUrl from "./assets/Lesson3_task2_example.png";
-
-const lesson1Task1QuizImgUrls = [
-  lesson1Task1Quiz1ImgUrl,
-  lesson1Task1Quiz2ImgUrl,
-  lesson1Task1Quiz3ImgUrl,
-  lesson1Task1Quiz4ImgUrl,
-  lesson1Task1Quiz5ImgUrl,
-  lesson1Task1Quiz6ImgUrl,
-  lesson1Task1Quiz7ImgUrl,
-  lesson1Task1Quiz8ImgUrl,
-  lesson1Task1Quiz9ImgUrl,
-  lesson1Task1Quiz10ImgUrl,
-];
+import images from "./assets/images";
 
 const solutions = [
   [
@@ -116,10 +90,9 @@ function showResult(lesson, task) {
     solution.logic();
 
     if (lesson == 1 && task == 1) {
-      for (let i = 1; i <= 10; i++) {
-        document.getElementById(`lesson1Task1Quiz${i}`).src =
-          lesson1Task1QuizImgUrls[i - 1];
-      }
+      images.lesson1.task1.quizess.forEach((imgUrl, index) => {
+        document.getElementById(`lesson1Task1Quiz${index + 1}`).src = imgUrl;
+      });
     }
 
     const githubLink = document.getElementById("github");
@@ -136,15 +109,15 @@ function setImageSource(lesson, task) {
   switch (`${lesson}-${task}`) {
     case "1-1":
       elementId = "lesson1Task1DescriptionImage";
-      imageUrl = lesson1Task1ExampleImgUrl;
+      imageUrl = images.lesson1.task1.example;
       break;
     case "2-2":
       elementId = "lesson2Task2DescriptionImage";
-      imageUrl = lesson2Task2ExampleImgUrl;
+      imageUrl = images.lesson2.task2.example;
       break;
     case "3-2":
       elementId = "lesson3Task2DescriptionImage";
-      imageUrl = lesson3Task2ExampleImgUrl;
+      imageUrl = images.lesson3.task2.example;
       break;
     default:
       return;
