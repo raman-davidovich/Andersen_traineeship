@@ -4,6 +4,7 @@ import { lesson1Task2Html, lesson1Task2Logic } from "./solutions/lesson1Task2";
 import { lesson2Task1Html, lesson2Task1Logic } from "./solutions/lesson2Task1";
 import { lesson2Task2Html, lesson2Task2Logic } from "./solutions/lesson2Task2";
 import { lesson6Task1Html, lesson6Task1Logic } from "./solutions/lesson6Task1";
+import { lesson7Task1Html, lesson7Task1Logic } from "./solutions/lesson7Task1";
 
 import images from "./assets/images";
 
@@ -23,7 +24,10 @@ const solutions = [
   [{ html: null, logic: null }],
   [{ html: null, logic: null }],
   [{ html: lesson6Task1Html, logic: lesson6Task1Logic }],
-  [{ html: null, logic: null }],
+  [
+    { html: lesson7Task1Html, logic: lesson7Task1Logic },
+    { html: null, logic: null },
+  ],
 ];
 
 function showLastFinishedLesson(lastFinishedLesson) {
