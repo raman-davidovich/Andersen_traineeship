@@ -13,6 +13,8 @@ import lesson1Task1ExampleImgUrl from "./Lesson1_task1_example.png";
 import lesson2Task2ExampleImgUrl from "./Lesson2_task2_example.png";
 import lesson3Task2ExampleImgUrl from "./Lesson3_task2_example.png";
 
+import lesson7Task2Arrow from "./Vector.svg";
+
 const images = {
   lesson1: {
     task1: {
@@ -39,6 +41,11 @@ const images = {
   lesson3: {
     task2: {
       example: lesson3Task2ExampleImgUrl,
+    },
+  },
+  lesson7: {
+    task2: {
+      icon: lesson7Task2Arrow,
     },
   },
 };

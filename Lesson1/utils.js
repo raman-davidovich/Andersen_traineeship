@@ -5,6 +5,7 @@ import { lesson2Task1Html, lesson2Task1Logic } from "./solutions/lesson2Task1";
 import { lesson2Task2Html, lesson2Task2Logic } from "./solutions/lesson2Task2";
 import { lesson6Task1Html, lesson6Task1Logic } from "./solutions/lesson6Task1";
 import { lesson7Task1Html, lesson7Task1Logic } from "./solutions/lesson7Task1";
+import { lesson7Task2Html, lesson7Task2Logic } from "./solutions/lesson7Task2";
 
 import images from "./assets/images";
 
@@ -26,7 +27,7 @@ const solutions = [
   [{ html: lesson6Task1Html, logic: lesson6Task1Logic }],
   [
     { html: lesson7Task1Html, logic: lesson7Task1Logic },
-    { html: null, logic: null },
+    { html: lesson7Task2Html, logic: lesson7Task2Logic },
   ],
 ];
 
@@ -93,6 +94,10 @@ function showResult(lesson, task) {
     solutionBlock.innerHTML = solution.html;
     solution.logic();
 
+    setImageSource(lesson, task);
+
+    if (lesson == 7 && task == 2) setImageSource(7, 2, "timerResetIcon");
+
     if (lesson == 1 && task == 1) {
       images.lesson1.task1.quizess.forEach((imgUrl, index) => {
         document.getElementById(`lesson1Task1Quiz${index + 1}`).src = imgUrl;
@@ -106,7 +111,7 @@ function showResult(lesson, task) {
   }
 }
 
-function setImageSource(lesson, task) {
+function setImageSource(lesson, task, elementIdOverride) {
   let elementId = "";
   let imageUrl = "";
 
@@ -123,12 +128,71 @@ function setImageSource(lesson, task) {
       elementId = "lesson3Task2DescriptionImage";
       imageUrl = images.lesson3.task2.example;
       break;
+    case "7-2":
+      elementId = "stopwatchResetIcon";
+      imageUrl = images.lesson7.task2.icon;
+      break;
     default:
       return;
   }
 
+  if (elementIdOverride) {
+    elementId = elementIdOverride;
+  }
+
   if (elementId && imageUrl) {
-    document.getElementById(elementId).src = imageUrl;
+    const imageElement = document.getElementById(elementId);
+    if (imageElement) {
+      imageElement.src = imageUrl;
+    } else {
+      console.warn(`Element with id ${elementId} not found.`);
+    }
+  }
+}
+
+function updateDisplay(counter = 0, transformedTime, application) {
+  transformedTime.tensMinutes = String(
+    Math.trunc(counter / 60) > 9 ? Math.trunc(counter / 60 / 10) : "0"
+  );
+  transformedTime.minutes = String(
+    Math.trunc(counter / 60) < 9
+      ? Math.trunc(counter / 60)
+      : String(Math.trunc(counter / 60))
+          .split("")
+          .pop()
+  );
+  transformedTime.tensSeconds =
+    Math.trunc((counter % 60) / 10) > 5
+      ? Math.trunc((counter % 60) / 10) - 6
+      : Math.trunc((counter % 60) / 10);
+  transformedTime.seconds = String(counter).split("").pop();
+
+  if (application === "stopwatch") {
+    const stopwatchTensMinutesElement = document.getElementById(
+      "stopwatchTensMinutes"
+    );
+    const stopwatchMinutesElement = document.getElementById("stopwatchMinutes");
+    const stopwatchTensSecondsElement = document.getElementById(
+      "stopwatchTensSeconds"
+    );
+    const stopwatchSecondsElement = document.getElementById("stopwatchSeconds");
+
+    stopwatchTensMinutesElement.textContent = transformedTime.tensMinutes;
+    stopwatchMinutesElement.textContent = transformedTime.minutes;
+    stopwatchTensSecondsElement.textContent = transformedTime.tensSeconds;
+    stopwatchSecondsElement.textContent = transformedTime.seconds;
+  }
+
+  if (application === "timer") {
+    const timerTensMinutesElement = document.getElementById("timerTensMinutes");
+    const timerMinutesElement = document.getElementById("timerMinutes");
+    const timerTensSecondsElement = document.getElementById("timerTensSeconds");
+    const timerSecondsElement = document.getElementById("timerSeconds");
+
+    timerTensMinutesElement.textContent = transformedTime.tensMinutes;
+    timerMinutesElement.textContent = transformedTime.minutes;
+    timerTensSecondsElement.textContent = transformedTime.tensSeconds;
+    timerSecondsElement.textContent = transformedTime.seconds;
   }
 }
 
@@ -139,4 +203,5 @@ export {
   markFirstTask,
   showResult,
   setImageSource,
+  updateDisplay,
 };

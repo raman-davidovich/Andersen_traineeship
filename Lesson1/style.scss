@@ -334,7 +334,8 @@ dialog:modal {
   color: green;
 }
 
-#lesson7Task1 {
+#lesson7Task1,
+#lesson7Task2 {
   width: 100%;
   height: 100%;
   display: flex;
@@ -348,5 +349,121 @@ dialog:modal {
 
   #replace {
     transition: left 0.5s ease-in-out, top 0.5s ease-in-out;
+  }
+}
+
+#lesson7Task2 {
+  background-color: #f6f6f6;
+  color: $background-color;
+
+  #stopwatch,
+  #timer {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap: 15px;
+  }
+  #stopwatch {
+    border-right: 1px solid $border-color;
+  }
+
+  h4 {
+    margin: 0;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 50px;
+    line-height: 100px;
+    color: #303030;
+    opacity: 0.1;
+  }
+
+  #clock_area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 242px;
+    height: 242px;
+    background: linear-gradient(180deg, #e1e1e1 0%, #ffffff 100%);
+    border-radius: 50%;
+    box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.5),
+      10px 10px 15px rgba(70, 70, 70, 0.12);
+  }
+
+  #stopwatchTensMinutes,
+  #stopwatchMinutes,
+  #divider,
+  #stopwatchTensSeconds,
+  #stopwatchSeconds,
+  #timerTensMinutes,
+  #timerMinutes,
+  #timerTensSeconds,
+  #timerSeconds {
+    color: #e08b01;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 54px;
+  }
+
+  #stopwatchReset,
+  #timerReset {
+    position: absolute;
+    top: 80%;
+    width: 74px;
+    height: 74px;
+    border-radius: 50%;
+    background: linear-gradient(180deg, #ffab00 0%, #d68100 100%);
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
+    border: 0;
+  }
+
+  #changeClock {
+    margin-top: 20px;
+  }
+
+  #timerIncrement,
+  #timerDecrement {
+    color: $main-text-color;
+    border: 0;
+    font-weight: 700;
+    font-size: 15px;
+    background: linear-gradient(180deg, #ffab00 0%, #d68100 100%);
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+  }
+
+  #stopwatchStart,
+  #timerStart {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    color: $main-text-color;
+    display: block;
+    width: 327px;
+    height: 48px;
+    border-radius: 80px;
+    background: linear-gradient(180deg, #ffab00 0%, #d68100 100%);
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
+    border: 0;
+  }
+
+  #stopwatchReset:hover,
+  #stopwatchStart:hover,
+  #timerIncrement:hover,
+  #timerDecrement:hover,
+  #timerReset:hover,
+  #timerStart:hover {
+    box-shadow: 0 10px 20px 5px rgba(0, 0, 0, 0.5);
+    transform: translateY(-5px);
+  }
+
+  #stopwatch > #stopwatchStart {
+    margin-top: 54.5px;
   }
 }
