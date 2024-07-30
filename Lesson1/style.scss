@@ -467,3 +467,68 @@ dialog:modal {
     margin-top: 54.5px;
   }
 }
+
+#lesson5Task1 {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  height: 500px;
+
+  #drawBlock {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    flex: 6.5;
+    border: 1px solid $border-color;
+    border-radius: 8px;
+    background-color: $main-text-color;
+    color: $background-color;
+    padding: 5px;
+    overflow-x: scroll;
+
+    #stackElement,
+    #availableIndex {
+      margin-bottom: 5px;
+      padding: 5px;
+      border: 1px solid $border-color;
+      border-radius: 8px;
+      text-align: center;
+      font-size: 22px;
+    }
+
+    #availableIndex {
+      border: 1px dashed $border-color;
+    }
+  }
+
+  #buttonsBlock {
+    flex: 3.5;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    #createStack,
+    #addElement {
+      display: flex;
+      flex-direction: raw;
+      gap: 15px;
+    }
+
+    #createFromEntity {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+  }
+
+  dialog:modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    button {
+      margin: 0 !important;
+      width: fit-content;
+    }
+  }
+}

@@ -100,19 +100,20 @@ const tasks = [
   [
     {
       description: `Create a Stack class.<br/>
-      The Stack constructor must take the maximum number of elements in the stack as its only optional parameter. If the parameter is an invalid number, generate an error. If the parameter is not specified, set the maximum tack size to 10. <br/>
+      The Stack constructor must take the maximum number of elements in the stack as its only optional parameter. If the parameter is an invalid number, generate an error. If the parameter is not specified, set the maximum stack size to 10. <br/>
       <br/>
       Implement public methods:<br/>
       - push(elem) - add a new element to the stack (generate an error if the stack is full);<br/>
       - pop() - remove the top element of the stack and return it (generate an error of the stack is empty);<br/>
       - peek() - get the top element of the stack (return null if the stack is empty);<br/>
-      - isEmpty() - returns Boolean value (whether the stack is empty or not);
+      - isEmpty() - returns Boolean value (whether the stack is empty or not);<br/>
       - toArray() - returns a new array consisting of stack elements.<br/>
       <br/>
       Implement static public methods:<br/>
       - fromIterable(Iterable) - returns a new Stack, the elements of which are the elements of the passed iterable entity. The maximum number of elements of such a stack must be equal to the length of this entity. If the entity is not iterable, generate an error.
       `,
-      githubLink: ",",
+      githubLink:
+        "https://github.com/raman-davidovich/Andersen_traineeship/blob/main/Lesson1/solutions/lesson5Task1.js",
     },
   ],
   [
