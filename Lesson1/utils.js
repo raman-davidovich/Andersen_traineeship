@@ -3,6 +3,7 @@ import { lesson1Task1Html, lesson1Task1Logic } from "./solutions/lesson1Task1";
 import { lesson1Task2Html, lesson1Task2Logic } from "./solutions/lesson1Task2";
 import { lesson2Task1Html, lesson2Task1Logic } from "./solutions/lesson2Task1";
 import { lesson2Task2Html, lesson2Task2Logic } from "./solutions/lesson2Task2";
+import { lesson3Task2Html, lesson3Task2Logic } from "./solutions/lesson3Task2";
 import { lesson5Task1Html, lesson5Task1Logic } from "./solutions/lesson5Task1";
 import { lesson6Task1Html, lesson6Task1Logic } from "./solutions/lesson6Task1";
 import { lesson7Task1Html, lesson7Task1Logic } from "./solutions/lesson7Task1";
@@ -21,7 +22,7 @@ const solutions = [
   ],
   [
     { html: null, logic: null },
-    { html: null, logic: null },
+    { html: lesson3Task2Html, logic: lesson3Task2Logic },
   ],
   [{ html: null, logic: null }],
   [{ html: lesson5Task1Html, logic: lesson5Task1Logic }],

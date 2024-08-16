@@ -76,7 +76,8 @@ const tasks = [
       <br />
       <img id="lesson3Task2DescriptionImage" class="image"/>
       `,
-      githubLink: "",
+      githubLink:
+        "https://github.com/raman-davidovich/Andersen_traineeship/blob/main/Lesson1/solutions/lesson3Task2.js",
     },
   ],
   [

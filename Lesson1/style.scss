@@ -532,3 +532,26 @@ dialog:modal {
     }
   }
 }
+
+#lesson3Task2 {
+  fieldset {
+    display: flex;
+    flex-direction: column;
+
+    #parameters {
+      display: flex;
+      flex-direction: column;
+      width: 200px;
+      gap: 5px;
+    }
+  }
+
+  #list {
+    height: 300px;
+    overflow-y: scroll;
+    border: 1px solid $border-color;
+    border-radius: 8px;
+    background-color: $main-text-color;
+    color: $background-color;
+  }
+}
