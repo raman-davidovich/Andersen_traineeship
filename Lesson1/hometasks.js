@@ -45,7 +45,7 @@ const tasks = [
   [
     {
       description: `Create a regular object and make it iterable. In this case, the iteration should proceed as follows:<br />
-       All values fron the object's
+       All values from the object's
          <strong>from</strong>
         property to the
         <strong>to</strong>
@@ -63,7 +63,8 @@ const tasks = [
       for (let item of myIterable) { // Error!<br />
         console.log(item)<br />
       }`,
-      githubLink: "",
+      githubLink:
+        "https://github.com/raman-davidovich/Andersen_traineeship/blob/main/Lesson1/solutions/lesson3Task1.js",
     },
     {
       description: `You need to implement a function that will take a person's
